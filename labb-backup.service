@@ -1,0 +1,12 @@
+#Credit @https://unix.stackexchange.com/questions/47695/how-to-write-startup-script-for-systemd
+# 	@https://hackernoon.com/how-to-run-scripts-on-boot-in-linux-using-systemd
+
+[Unit]
+Description=Backup systemd Service for labb
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/labb-backup.sh
+
+[Install]
+WantedBy=multi-user.target
